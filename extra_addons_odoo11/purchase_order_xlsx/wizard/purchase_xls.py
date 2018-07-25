@@ -552,7 +552,7 @@ class WizardWizards(models.Model):
         #n = 10; i = 0 
                               
         filename = ('Reporte de Compras'+ '.xls')
-        workbook.save(filename)
+        #workbook.save(filename)
         fp = open(filename, "rb")
         file_data = fp.read()
         out = base64.encodestring(file_data) 
