@@ -559,6 +559,7 @@ class WizardWizards(models.Model):
         file_data = fp.read()
         out = base64.encodestring(file_data) 
         # VEAMOS SI ESTO SE SUPLANTA (ESTO OCURRE EN TESTING)
+        # LINEA PARA REMOTE
     
 # Files actions         
         attach_vals = {
