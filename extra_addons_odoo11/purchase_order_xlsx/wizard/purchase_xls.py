@@ -553,14 +553,11 @@ class WizardWizards(models.Model):
                               
         filename = ('Reporte de Compras'+ '.xls')
         workbook.save(filename)
-        #CAMBIO HECHO PARA TESTING
-        #OTRO CAMBIO AGREGADO EN MASTER, EL NUEVO TESTING
+        #UNICO COMENTARIO EN EL REMOTO
         fp = open(filename, "rb")
         file_data = fp.read()
         out = base64.encodestring(file_data) 
-        # VEAMOS SI ESTO SE SUPLANTA (ESTO OCURRE EN TESTING)
-        # LINEA PARA REMOTE
-    
+
 # Files actions         
         attach_vals = {
                 'purchase_data': 'Reporte Compras'+ '.xls',
