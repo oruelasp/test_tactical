@@ -552,10 +552,13 @@ class WizardWizards(models.Model):
         #n = 10; i = 0 
                               
         filename = ('Reporte de Compras'+ '.xls')
-        #workbook.save(filename)
+        workbook.save(filename)
+        #CAMBIO HECHO PARA TESTING
+        #OTRO CAMBIO AGREGADO EN MASTER, EL NUEVO TESTING
         fp = open(filename, "rb")
         file_data = fp.read()
         out = base64.encodestring(file_data) 
+        # VEAMOS SI ESTO SE SUPLANTA (ESTO OCURRE EN TESTING)
     
 # Files actions         
         attach_vals = {
