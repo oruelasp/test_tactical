@@ -554,6 +554,7 @@ class WizardWizards(models.Model):
         filename = ('Reporte de Compras'+ '.xls')
         workbook.save(filename)
         #COMENTARIO EN AMBIENTE PRODUCCION
+        # SARILLA LA FANTASMA
         fp = open(filename, "rb")
         file_data = fp.read()
         out = base64.encodestring(file_data) 
